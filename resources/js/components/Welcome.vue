@@ -1,0 +1,3 @@
+<template>
+    Boiler House
+</template>
