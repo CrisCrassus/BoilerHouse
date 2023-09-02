@@ -13,14 +13,14 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
+        "friendsofphp/php-cs-fixer": "^3.25",
         "laravel/breeze": "^1.19",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.0",
         "phpunit/phpunit": "^10.0",
-        "spatie/laravel-ignition": "^2.0",
-        "squizlabs/php_codesniffer": "^3.7"
+        "spatie/laravel-ignition": "^2.0"
     },
     "autoload": {
         "psr-4": {
@@ -35,6 +35,12 @@
         }
     },
     "scripts": {
+        "format": [
+            "vendor/bin/php-cs-fixer fix ."
+        ],
+        "format:list": [
+            "vendor/bin/php-cs-fixer list-files"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
